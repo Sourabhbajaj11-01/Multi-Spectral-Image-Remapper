@@ -81,9 +81,9 @@ def test_colorize_with_real_fits():
     
     # Create mock file storage objects
     files = {
-        'red': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits'),
-        'green': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),
-        'blue': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits')
+        'red': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),    # I → Red
+        'green': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits'),  # V → Green  
+        'blue': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits')    # B → Blue
     }
     
     # Test with 'natural' palette
@@ -140,9 +140,9 @@ def test_different_palettes():
     
     for palette in palettes:
         files = {
-            'red': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits'),
-            'green': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),
-            'blue': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits')
+            'red': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),    # I → Red
+            'green': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits'),  # V → Green  
+            'blue': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits')    # B → Blue
         }
         
         model_params = {'palette': palette}
@@ -179,9 +179,9 @@ def test_custom_parameters():
         return
     
     files = {
-        'red': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits'),
-        'green': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),
-        'blue': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits')
+        'red': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),    # I → Red
+        'green': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits'),  # V → Green  
+        'blue': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits')    # B → Blue
     }
     
     # Test with custom parameters
@@ -240,9 +240,9 @@ def test_history_logging():
     
     # Perform colorization
     files = {
-        'red': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits'),
-        'green': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),
-        'blue': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits')
+        'red': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),    # I → Red
+        'green': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits'),  # V → Green  
+        'blue': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits')    # B → Blue
     }
     
     model_params = {'palette': 'hubble'}
@@ -278,9 +278,9 @@ def test_metadata_extraction():
         return
     
     files = {
-        'red': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits'),
-        'green': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),
-        'blue': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits')
+        'red': MockFileStorage(test_files[1], 'h_m51_i_s05_drz_sci.fits'),    # I → Red
+        'green': MockFileStorage(test_files[2], 'h_m51_v_s05_drz_sci.fits'),  # V → Green  
+        'blue': MockFileStorage(test_files[0], 'h_m51_b_s05_drz_sci.fits')    # B → Blue
     }
     
     controller = AppController()
